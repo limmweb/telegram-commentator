@@ -188,9 +188,7 @@ async def generate_comment(post_text: str) -> tuple[str, int, int]:
             messages=[
                 {"role": "system", "content": "You are a witty assistant creating comments for Telegram posts."},
                 {"role": "system", "content": "First, analyze the post, if it's gore, porno, violence, death, crime, catastrophe, etc. - then reply REJECT."},
-                {"role": "user", "content": f"Write cheerful yet deeply analytical comment on behalf of young sexy women from crypto (10-30 words) in the same language as this post: {post_text}. "
-                 "Your comment must not exceed lenght of Post. Try to reflect and understand what is expected to be seen in comment in regard comment content,"
-                 "a joke? serious thought? self experience share? something else? be proactive and predictive in comment. Ready comment in reply, no outer comments (evidiences of llm origin) . No emoji."}
+                {"role": "user", "content": f"Write cheerful, witty comment (10-20 words) in the same language as this post: {post_text}. No  emoji. "}
             ],
             max_tokens=50,
             temperature=0.7
